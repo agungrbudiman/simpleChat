@@ -19,7 +19,7 @@ public class Client {
         try {
             System.out.print("Masukkan ip server : ");
             String ipServer = scan.nextLine();
-            Socket client = new Socket("127.0.0.1", 2323);
+            Socket client = new Socket(ipServer, 2323);
             
             Reply r = new Reply(client);
             r.start();
