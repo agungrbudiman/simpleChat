@@ -30,12 +30,14 @@ public class Server {
         try {
             System.out.println("Menunggu client....");
             Socket server = serverSocket.accept();
+            
+            Reply r = new Reply(server);
+            r.start();
+            
             System.out.println("Client terhubung || "+server.getRemoteSocketAddress());
+            System.out.println("");
             while(true) {
-               DataInputStream in = new DataInputStream(server.getInputStream());
-                System.out.println("Client : "+in.readUTF());
                DataOutputStream out = new DataOutputStream(server.getOutputStream());
-                System.out.print("Chat : ");
                out.writeUTF(scan.nextLine());  
             }
             

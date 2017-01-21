@@ -18,6 +18,8 @@ public class Driver {
         System.out.println("2. Sebagai Client");
         System.out.print("Pilihan anda : ");
         int pil = scan.nextInt();
+        System.out.println("----------------------");
+        System.out.println("");
         
         switch(pil) {
             case 1 :
