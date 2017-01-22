@@ -19,7 +19,7 @@ public class Server {
     public Server() {
         try {
             serverSocket = new ServerSocket(2323);
-            serverSocket.setSoTimeout(50000);
+            serverSocket.setSoTimeout(90000);
             scan = new Scanner(System.in);
         } catch (IOException e) {
             e.printStackTrace();
